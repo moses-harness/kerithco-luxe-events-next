@@ -97,63 +97,63 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-secondary/30">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-16 sm:py-24 md:py-32 bg-secondary/30">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
             {/* Contact Info */}
             <div>
-              <p className="text-sm tracking-[0.3em] uppercase text-gold mb-6">
+              <p className="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold mb-4 sm:mb-6">
                 Get In Touch
               </p>
-              <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 sm:mb-6">
                 Let's Create Something Beautiful
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-10">
+              <p className="text-muted-foreground leading-relaxed mb-8 sm:mb-10 text-sm sm:text-base">
                 Ready to bring your vision to life? We'd love to hear about your 
                 upcoming celebration. Reach out today and let's start planning 
                 something extraordinary.
               </p>
 
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 flex items-center justify-center border border-gold/30 text-gold">
-                    <Mail size={20} strokeWidth={1.5} />
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-gold/30 text-gold flex-shrink-0">
+                    <Mail size={18} strokeWidth={1.5} className="sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:hello@kerithandco.com" className="text-foreground hover:text-gold transition-colors">
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground">Email</p>
+                    <a href="mailto:hello@kerithandco.com" className="text-sm sm:text-base text-foreground hover:text-gold transition-colors break-all">
                       hello@kerithandco.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 flex items-center justify-center border border-gold/30 text-gold">
-                    <Phone size={20} strokeWidth={1.5} />
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-gold/30 text-gold flex-shrink-0">
+                    <Phone size={18} strokeWidth={1.5} className="sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Phone</p>
-                    <a href="tel:+1234567890" className="text-foreground hover:text-gold transition-colors">
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground">Phone</p>
+                    <a href="tel:+1234567890" className="text-sm sm:text-base text-foreground hover:text-gold transition-colors">
                       (123) 456-7890
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 flex items-center justify-center border border-gold/30 text-gold">
-                    <MapPin size={20} strokeWidth={1.5} />
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-gold/30 text-gold flex-shrink-0">
+                    <MapPin size={18} strokeWidth={1.5} className="sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="text-foreground">Available Nationwide</p>
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground">Location</p>
+                    <p className="text-sm sm:text-base text-foreground">Available Nationwide</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="bg-background p-8 md:p-10 border border-border">
+            <div className="bg-background p-6 sm:p-8 md:p-10 border border-border">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="contact-name" className="text-sm text-muted-foreground mb-2 block">

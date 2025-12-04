@@ -47,45 +47,45 @@ const packages = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-sm tracking-[0.3em] uppercase text-gold mb-6">
+    <section id="pricing" className="py-16 sm:py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold mb-4 sm:mb-6">
             Investment
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 sm:mb-6">
             What's Included
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-4">
             Tailored packages designed to meet your unique needs. 
             Contact us for custom pricing based on your vision.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`relative p-8 md:p-10 border ${
+              className={`relative p-6 sm:p-8 md:p-10 border ${
                 pkg.highlight
                   ? "border-gold bg-secondary/20 shadow-elegant"
                   : "border-border bg-background"
               }`}
             >
               {pkg.highlight && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gold text-background text-xs tracking-widest uppercase">
+                <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 px-3 sm:px-4 py-1 bg-gold text-background text-xs tracking-widest uppercase whitespace-nowrap">
                   Most Popular
                 </div>
               )}
-              <h3 className="font-serif text-2xl text-foreground mb-2">
+              <h3 className="font-serif text-xl sm:text-2xl text-foreground mb-2">
                 {pkg.name}
               </h3>
-              <p className="text-muted-foreground mb-8">{pkg.description}</p>
-              <ul className="space-y-4 mb-10">
+              <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">{pkg.description}</p>
+              <ul className="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
                 {pkg.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground/80">{feature}</span>
+                  <li key={featureIndex} className="flex items-start gap-2 sm:gap-3">
+                    <Check className="w-4 h-4 sm:w-5 sm:h-5 text-gold flex-shrink-0 mt-0.5" />
+                    <span className="text-sm sm:text-base text-foreground/80">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -100,7 +100,7 @@ const Pricing = () => {
           ))}
         </div>
 
-        <p className="text-center text-muted-foreground mt-12 text-sm">
+        <p className="text-center text-muted-foreground mt-8 sm:mt-12 text-xs sm:text-sm px-4">
           All packages are customizable. Schedule a consultation to discuss your specific needs.
         </p>
       </div>

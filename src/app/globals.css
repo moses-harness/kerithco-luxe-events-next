@@ -109,14 +109,34 @@
 
   html {
     scroll-behavior: smooth;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+    /* Better text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+  }
+
+  /* Better touch targets on mobile */
+  @media (max-width: 768px) {
+    button, a, input, textarea, select {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Improve tap highlight */
+    a, button {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
   }
 }
 

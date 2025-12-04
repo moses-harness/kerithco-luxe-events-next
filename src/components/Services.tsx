@@ -35,34 +35,34 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 md:py-32 bg-secondary/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-sm tracking-[0.3em] uppercase text-gold mb-6">
+    <section id="services" className="py-16 sm:py-24 md:py-32 bg-secondary/30">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold mb-4 sm:mb-6">
             What We Do
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 sm:mb-6">
             Our Services
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-4">
             Every event is an opportunity to create something extraordinary. 
             We offer comprehensive planning services tailored to your unique vision.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-background p-8 md:p-10 border border-border hover:border-gold/30 transition-all duration-500 hover:shadow-elegant"
+              className="group bg-background p-6 sm:p-8 md:p-10 border border-border hover:border-gold/30 transition-all duration-500 hover:shadow-elegant"
             >
-              <div className="w-14 h-14 flex items-center justify-center border border-gold/30 text-gold mb-6 group-hover:bg-gold group-hover:text-background transition-all duration-500">
-                <service.icon size={24} strokeWidth={1.5} />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center border border-gold/30 text-gold mb-4 sm:mb-6 group-hover:bg-gold group-hover:text-background transition-all duration-500">
+                <service.icon size={20} strokeWidth={1.5} className="sm:w-6 sm:h-6" />
               </div>
-              <h3 className="font-serif text-2xl text-foreground mb-4">
+              <h3 className="font-serif text-xl sm:text-2xl text-foreground mb-3 sm:mb-4">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
             </div>

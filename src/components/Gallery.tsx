@@ -51,21 +51,21 @@ const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState<typeof galleryItems[0] | null>(null);
 
   return (
-    <section id="gallery" className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-sm tracking-[0.3em] uppercase text-gold mb-6">
+    <section id="gallery" className="py-16 sm:py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-xs sm:text-sm tracking-[0.3em] uppercase text-gold mb-4 sm:mb-6">
             Our Work
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 sm:mb-6">
             Portfolio
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-4">
             A glimpse into the memorable moments we've helped create for our cherished clients.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {galleryItems.map((item, index) => (
             <div
               key={index}
@@ -79,17 +79,17 @@ const Gallery = () => {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-warm-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-xs tracking-widest uppercase text-gold-light mb-2">
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-xs tracking-widest uppercase text-gold-light mb-1 sm:mb-2">
                   {item.category}
                 </p>
-                <h3 className="font-serif text-2xl text-cream">
+                <h3 className="font-serif text-lg sm:text-2xl text-cream">
                   {item.title}
                 </h3>
               </div>
               {/* Click indicator */}
-              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-xs tracking-wider uppercase text-cream/80 bg-warm-black/50 px-3 py-1 rounded-full">
+              <div className="absolute top-2 sm:top-4 right-2 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-xs tracking-wider uppercase text-cream/80 bg-warm-black/50 px-2 sm:px-3 py-1 rounded-full">
                   View Gallery
                 </span>
               </div>

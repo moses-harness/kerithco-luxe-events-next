@@ -35,14 +35,14 @@ const GalleryModal = ({ isOpen, onClose, images, title, category }: GalleryModal
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent 
-        className="max-w-5xl w-[95vw] h-[90vh] p-0 bg-warm-black border-none overflow-hidden"
+        className="max-w-5xl w-[95vw] sm:w-[90vw] h-[85vh] sm:h-[90vh] p-0 bg-warm-black border-none overflow-hidden"
         onKeyDown={handleKeyDown}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-50 p-2 rounded-full bg-warm-black/50 text-cream hover:bg-warm-black/80 transition-colors"
+          className="absolute top-2 right-2 sm:top-4 sm:right-4 z-50 p-2 rounded-full bg-warm-black/50 text-cream hover:bg-warm-black/80 transition-colors"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
         <div className="relative w-full h-full flex flex-col">
@@ -63,26 +63,26 @@ const GalleryModal = ({ isOpen, onClose, images, title, category }: GalleryModal
               <>
                 <button
                   onClick={handlePrevious}
-                  className="absolute left-4 p-3 rounded-full bg-warm-black/50 text-cream hover:bg-warm-black/80 transition-colors"
+                  className="absolute left-2 sm:left-4 p-2 sm:p-3 rounded-full bg-warm-black/50 text-cream hover:bg-warm-black/80 transition-colors"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-4 p-3 rounded-full bg-warm-black/50 text-cream hover:bg-warm-black/80 transition-colors"
+                  className="absolute right-2 sm:right-4 p-2 sm:p-3 rounded-full bg-warm-black/50 text-cream hover:bg-warm-black/80 transition-colors"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
               </>
             )}
           </div>
 
           {/* Footer Info */}
-          <div className="p-6 bg-gradient-to-t from-warm-black to-transparent">
-            <p className="text-xs tracking-widest uppercase text-gold mb-2">
+          <div className="p-4 sm:p-6 bg-gradient-to-t from-warm-black to-transparent">
+            <p className="text-xs tracking-widest uppercase text-gold mb-1 sm:mb-2">
               {category}
             </p>
-            <h3 className="font-serif text-2xl text-cream mb-3">{title}</h3>
+            <h3 className="font-serif text-lg sm:text-2xl text-cream mb-2 sm:mb-3">{title}</h3>
             
             {/* Dot Indicators */}
             {images.length > 1 && (
